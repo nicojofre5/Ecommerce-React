@@ -1,31 +1,141 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-
-@media (prefers-reduced-motion: no-preference) {
-
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background: rgb(23, 23, 23);
+  color: white;
+  min-height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-header {
+/* Nav bar */
 
+.nav-bar{
+  background-color: #0c0212;
+
+}
+.menu{
   display: flex;
-
   justify-content: space-around;
-
-
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link{
+  padding: 15px;
+  display: inline-block;
+  color: white;
+}
+.nav-link:hover{
+  color: rgba(59, 172, 237, 0.986);
+}
+.cont-card{
+  display: flex;
+  justify-content: center;
+  
+}
+.card{
+  text-align: center;
+  padding: 20px;
+  border:2px solid black;
+  margin-top: 20px;
+  background-color: rgba(113, 112, 117, 0.384);
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card img{
+  width: 250px;
+  margin: 5px;
+}
+
+.cont-precio{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: rgba(136, 146, 155, 0.354);
+}
+.cont-button{
+  padding: 15px;
+  margin:10px 5px 0px;
+}
+.cont-button button{
+  padding: 4px 10px;
+  background-color: rgba(5, 121, 183, 0.961);
+  color: white;
+  border-radius: 8px;
+  border:1px solid transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:1rem;
+}
+.cont-button button:hover{
+  background-color: turquoise;
+  cursor: pointer;
+}
+#cont-aviso{
+  padding: 20px 5px 0px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer{
+  padding: 35px;
+  margin:110px 0px 0px;
+  text-align: center;
+  background-color: #0c0212;
+  
+}
+/* form  registrar */
+
+.form-registrar input ,.form-login input{
+  display: block;
+}
+.form-login{
+  background-color: #0c0212;
+  padding: 50px 80px 10px;
+  border-radius: 15px;
+}
+.form-registrar label, .form-login label{
+  display: inline-block;
+  padding: 4px 0px;
+  
+  
+}
+.enviar-form{
+  background-color: rgba(5, 121, 183, 0.961);
+  color: white;
+  border: 1px solid transparent;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.contenedorform ,.cont-button-submit,.cont-gral-form{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 40px;
+}
+
+.cont-gral-form{
+  padding:130px;
+}
+.cont-form h1{
+  text-align: center;
+  padding: 10px;
+}
+
+.cont-form{
+  padding: 70px 40px 0px;
+}
+footer h4>a{
+  color: rgb(220, 152, 241);
+}
+footer h4, footer p {
+  display: inline-block;
 }

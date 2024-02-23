@@ -1,11 +1,27 @@
 import React from "react";
 
-function barnav(){
-    return(
-        <div>
-            <p>La concha puta de tu madre</p>
-        </div>
-    );
+function navbar() {
+  return (
+    <nav class="nav-bar">
+      <ul class="menu">
+        <li>
+          <a href="index.html" class="nav-link">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="registro.html" class="nav-link">
+            Registro
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="nav-link">
+            Login
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
-export default barnav;
+export default navbar;
