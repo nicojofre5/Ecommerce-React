@@ -6,7 +6,7 @@ function Registro() {
     <div class="cont-form">
     <h1>Registrarse</h1>
     <div class="contenedorform">
-      <form action="/" method="post" class="form-registrar">
+      <form action="#" method="post" class="form-registrar">
           <label for="nombre">
              Nombre
           </label>
