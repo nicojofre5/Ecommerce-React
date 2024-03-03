@@ -3,8 +3,20 @@ import React from "react";
 function Loguear()
 {
     return(
-        <div>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium pariatur, soluta enim in amet repellat assumenda voluptate exercitationem eaque maiores totam repellendus illum similique porro ratione, libero velit rem. Laborum?</h4>
+        <div class="cont-gral-form">
+            <form action="/" method="post" class="form-login">
+                <label for="user">
+                   Usuario
+                </label>
+                <input type="text" name="user" id="" required placeholder="Ingresar usuario" />
+                <label for="pass">
+                   Password
+                </label>
+                <input type="password" name="pass" id="" required placeholder="Ingresar password" />
+                <div class="cont-button-submit">
+                    <button type="submit" class="enviar-form">Enviar</button>
+                </div>
+              </form>
         </div>
     )
 }
