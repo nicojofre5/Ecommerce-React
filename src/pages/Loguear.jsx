@@ -3,7 +3,9 @@ import React from "react";
 function Loguear()
 {
     return(
-        <div></div>
+        <div>
+            <h1>Hola</h1>
+        </div>
     )
 }
 
