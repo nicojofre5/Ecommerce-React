@@ -24,7 +24,7 @@ body{
 }
 .container-hero h1{
   font-size: 1.4rem;
-  padding: 24px;
+  padding: 6px;
   font-family: "Anta", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -32,8 +32,9 @@ body{
   
 }
 .img-banner{
-  width: 100%;
-  height:300px;
+  width: 50%;
+  height:150px;
+  margin: 10px;
   
 }
 .container-banner{
@@ -60,6 +61,10 @@ body{
 .nav-link:hover{
   color: rgba(59, 172, 237, 0.986);
 }
+
+/* Estilos a form de pagina registro */
+
+
 .cont-card{
   display: flex;
   justify-content: center;
@@ -132,6 +137,7 @@ footer{
   
   
 }
+
 .enviar-form{
   background-color: rgba(5, 121, 183, 0.961);
   color: white;
@@ -143,7 +149,7 @@ footer{
 .contenedorform ,.cont-button-submit,.cont-gral-form{
   display: flex;
   justify-content: center;
-  padding: 10px 0px 40px;
+  padding: 10px 0px 20px;
 }
 
 .cont-gral-form{
@@ -154,8 +160,12 @@ footer{
   padding: 10px;
 }
 
-.cont-form{
-  padding: 70px 40px 0px;
+.copyright{
+  padding: 0px 10px;
+}
+.form-registrar{
+  padding: 20px 40px 0px;
+ 
 }
 footer h4>a{
   color: rgb(220, 152, 241);
