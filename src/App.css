@@ -17,7 +17,7 @@ body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* inicial  */
+/* BannerInicial */
 
 .container-hero{
   background-color: rgba(60, 6, 76, 0.059);
@@ -31,7 +31,16 @@ body{
   text-align: end;
   
 }
-
+.img-banner{
+  width: 100%;
+  height:300px;
+  
+}
+.container-banner{
+  display: flex;
+  justify-content: center;
+ 
+}
 /* Nav bar */
 
 .nav-bar{

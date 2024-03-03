@@ -2,7 +2,7 @@ import "./App.css";
 import NavBar from "./components/navbar"
 import BannerInicial from "./components/bannerinicial";
 import ImagenInicial from "./components/imagenbanner";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 import Rutas from "./components/Rutas";
 
 function App() {
