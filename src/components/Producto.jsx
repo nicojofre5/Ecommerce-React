@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Producto(props) {
+
+  const [comprar, setComprar] = useState("");
+
+  const handleComprar = (e) => {
+    setComprar("Compró el producto")
+  };
   return (
     <>
      
@@ -13,13 +19,14 @@ function Producto(props) {
           <div class="cont-precio">
             <h2> $ {props.precio}</h2>
           </div>
-          <div id="cont-aviso"></div>
+          
+          <div>{comprar}</div>
           <div class="cont-button">
-            <button class="comprar" id="comprar" onclick="mostrarCartel()">
+            
+            <button className="comprar" id="comprar" onClick={handleComprar}>
               Comprar
             </button>
-            <button class="favoritos">Marcar favorito</button>
-          </div>
+            </div>
         </div>
       </div>
     </>

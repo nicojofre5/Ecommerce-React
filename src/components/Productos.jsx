@@ -6,12 +6,13 @@ function Productos() {
 
     const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState();
+    const [buscar, setBuscar] = useState("iPhone");
 
     useEffect(() => {
         const request = async () => {
             
             try {
-                const response = await getAllProductos();
+                const response = await getAllProductos(buscar);
                 
                 console.log("Desde productos:",response.results);
 
@@ -24,7 +25,13 @@ function Productos() {
 
         request();
 
-    }, []);
+    }, [buscar]);
+
+    const handleChange = (event) => {
+      const value = event.target.value;
+      console.log(value);
+      setBuscar(value);
+    }
 
     if (loading) {
     return (
@@ -33,8 +40,15 @@ function Productos() {
   } else {
     return (
       <>
-        
-        {productos.slice(1,16).map((producto) =>
+        <div id="buscador">
+          <input type="text" 
+          name="buscar"
+          value={buscar}
+          onChange={handleChange}
+          placeholder="buscar"
+          />
+        </div>
+        {productos.slice(1,17).map((producto) =>
           <Producto
             id={producto.id}
             imagen={producto.thumbnail}
