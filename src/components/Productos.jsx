@@ -33,6 +33,7 @@ function Productos() {
   } else {
     return (
       <>
+        
         {productos.slice(1,16).map((producto) =>
           <Producto
             id={producto.id}
@@ -41,8 +42,7 @@ function Productos() {
             precio={producto.price}
           />
         )}
-        <br />
-        {/*<button onClick={handleClick}>Filtrar</button>*/}
+      
       </>
     );
   }
