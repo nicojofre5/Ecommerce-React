@@ -28,6 +28,7 @@ function Productos() {
     }, [buscar]);
 
     const handleChange = (event) => {
+
       const value = event.target.value;
       console.log(value);
       setBuscar(value);
@@ -40,14 +41,14 @@ function Productos() {
   } else {
     return (
       <>
-        <div id="buscador">
-          <input type="text" 
-          name="buscar"
-          value={buscar}
-          onChange={handleChange}
-          placeholder="buscar"
-          />
-        </div>
+         <div id="buscador"> 
+        <input type="text"
+        name="buscar"
+         value={buscar}
+         onChange={handleChange}
+         placeholder="buscar"
+        /> <br />
+        <hr /></div>
         {productos.slice(1,17).map((producto) =>
           <Producto
             id={producto.id}
