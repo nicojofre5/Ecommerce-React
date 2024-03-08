@@ -3,61 +3,58 @@ import { getAllProductos } from "../Services/productosService";
 import Producto from "./Producto";
 
 function Productos() {
+  const [loading, setLoading] = useState(true);
+  const [productos, setProductos] = useState();
+  const [buscar, setBuscar] = useState("iPhone");
 
-    const [loading, setLoading] = useState(true)
-    const [productos, setProductos] = useState();
-    const [buscar, setBuscar] = useState("iPhone");
+  useEffect(() => {
+    const request = async () => {
+      try {
+        const response = await getAllProductos(buscar);
 
-    useEffect(() => {
-        const request = async () => {
-            
-            try {
-                const response = await getAllProductos(buscar);
-                
-                console.log("Desde productos:",response.results);
+        console.log("Desde productos:", response.results);
 
-                setProductos(response.results)
-                setLoading(false);
-            } catch (evento) {
-                console.log(evento);
-            }
-        };
+        setProductos(response.results);
+        setLoading(false);
+      } catch (evento) {
+        console.log(evento);
+      }
+    };
 
-        request();
+    request();
+  }, [buscar]);
 
-    }, [buscar]);
+  const handleChange = (event) => {
+    const value = event.target.value;
+    console.log(value);
+    setBuscar(value);
+  };
 
-    const handleChange = (event) => {
-
-      const value = event.target.value;
-      console.log(value);
-      setBuscar(value);
-    }
-
-    if (loading) {
-    return (
-      <div>Cargando...</div>
-    )
+  if (loading) {
+    return <div>Cargando...</div>;
   } else {
     return (
       <>
-         <div id="buscador"> 
-        <input type="text"
-        name="buscar"
-         value={buscar}
-         onChange={handleChange}
-         placeholder="buscar"
-        /> <br />
-        <hr /></div>
-        {productos.slice(1,17).map((producto) =>
+     
+        <div id="buscador">
+          
+          <input
+            type="text"
+            name="buscar"
+            value={buscar}
+            onChange={handleChange}
+            placeholder="Realice su búsqueda..."
+          />
+          </div>
+       
+        {productos.slice(1, 17).map((producto) => (
           <Producto
             id={producto.id}
             imagen={producto.thumbnail}
             nombre={producto.title}
             precio={producto.price}
           />
-        )}
-      
+        ))}
       </>
     );
   }

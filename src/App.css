@@ -70,10 +70,27 @@ body{
   background: rgb(33, 2, 43);
 }
 .cont-card{
+  display:grid;
+  grid-template-areas: "buscador buscador buscador buscador"
+                       "imageninicial imageninicial imageninicial imageninicial";
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.2fr;
+;
+
+}
+#buscador{
+  margin: 15px;
+  grid-area: buscador;
+  grid-row: 1/3;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap:4px;
+  
+}
+#buscador input{
+  justify-self: center;
+  width: 60%;
+  padding:15px;
+
 }
 .card{
   text-align: center;
@@ -83,6 +100,8 @@ body{
   background-color: rgba(78, 77, 80, 0.384);
   border-radius: 10px;
   max-width: 300px;
+  grid-area:imageninicial;  
+  
 }
 
 .card img{

@@ -5,7 +5,7 @@ function Home()
     return(
       <>
       <h1 className="home-head">Promociones de Iphone</h1>
-      <div class="cont-card">
+      <div className="cont-card">
         <Productos/>
       </div>
       </>
